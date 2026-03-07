@@ -30,7 +30,7 @@ def clean_all():
     except Exception as e:
         logger.error(f"[Error] ES 清理失败: {e}")
 
-    # 3. 清理 Redis (对话缓存 & RAG缓存)
+    # 3. 清理 Redis (对话缓存 & RAG缓存。)
     try:
         import redis
         r = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT, db=settings.REDIS_DB)
